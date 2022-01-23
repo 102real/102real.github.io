@@ -11435,3 +11435,20 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+
+#btn1 {
+  width: 170px;
+  height: 40px;
+  font-size:17px;
+  font-family: 'Pretendard';
+  font-weight: 50000;
+  color: black;
+  line-height: 40px;
+  text-align: center;
+  background: white;
+  border-radius: 15px;
+  background-position: right 30px center;
+  letter-spacing: 0px;
+  margin: 0 auto;
+}
