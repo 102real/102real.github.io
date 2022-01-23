@@ -11452,3 +11452,8 @@ section.resume-section .resume-section-content {
   letter-spacing: 0px;
   margin: 0 auto;
 }
+
+#btn1:hover {
+  background: #000000;
+  color: #FFFFFF;
+}

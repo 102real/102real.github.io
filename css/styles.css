@@ -3985,7 +3985,7 @@ textarea.form-control-lg {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #000000;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -5079,12 +5079,12 @@ textarea.form-control-lg {
 
 .list-group-item-action {
   width: 100%;
-  color: #495057;
+  color: #000000;
   text-align: inherit;
 }
 .list-group-item-action:hover, .list-group-item-action:focus {
   z-index: 1;
-  color: #495057;
+  color: #000000;
   text-decoration: none;
   background-color: #f8f9fa;
 }
@@ -11392,7 +11392,7 @@ p.lead {
   justify-content: center;
   height: 3.5rem;
   width: 3.5rem;
-  background-color: #495057;
+  background-color: #000000;
   color: #fff;
   border-radius: 100%;
   font-size: 1.5rem;
@@ -11451,4 +11451,9 @@ section.resume-section .resume-section-content {
   background-position: right 30px center;
   letter-spacing: 0px;
   margin: 0 auto;
+}
+
+#btn1:hover {
+  background: #000000;
+  color: #FFFFFF;
 }
