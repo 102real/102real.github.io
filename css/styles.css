@@ -11402,7 +11402,8 @@ p.lead {
   margin-right: 0;
 }
 .social-icons .social-icon:hover {
-  background-color: #707070;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .dev-icons {
@@ -11447,7 +11448,7 @@ section.resume-section .resume-section-content {
   line-height: 40px;
   text-align: center;
   background: white;
-  border-radius: 15px;
+  border-radius: 20px;
   background-position: right 30px center;
   letter-spacing: 0px;
   margin: 0 auto;
