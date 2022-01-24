@@ -95,8 +95,8 @@ hr {
   margin: 1rem 0;
   color: inherit;
   background-color: currentColor;
-  border: 0;
-  opacity: 0.25;
+  border: 5000;
+  opacity: .8;
 }
 
 hr:not([size]) {
@@ -7036,7 +7036,7 @@ textarea.form-control-lg {
 }
 
 .flex-grow-1 {
-  flex-grow: 1 !important;
+  flex-grow: 0 !important;
 }
 
 .flex-shrink-0 {
@@ -7382,7 +7382,7 @@ textarea.form-control-lg {
 }
 
 .mb-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 .mb-auto {
