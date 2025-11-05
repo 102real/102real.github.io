@@ -5,7 +5,7 @@ import { FaBriefcase } from 'react-icons/fa';
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-dark-800">
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>Experience</SectionTitle>
         

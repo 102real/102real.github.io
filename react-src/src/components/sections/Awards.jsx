@@ -5,7 +5,7 @@ import { FaTrophy, FaCertificate } from 'react-icons/fa';
 
 export const Awards = () => {
   return (
-    <section id="awards" className="py-20 bg-gray-50 dark:bg-dark-800">
+    <section id="awards" className="py-20 bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>Awards & Certifications</SectionTitle>
         

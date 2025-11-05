@@ -5,7 +5,7 @@ import { FaProjectDiagram } from 'react-icons/fa';
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-dark-900">
+    <section id="projects" className="py-20 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>Projects</SectionTitle>
         

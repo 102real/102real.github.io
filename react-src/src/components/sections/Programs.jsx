@@ -5,7 +5,7 @@ import { FaCode } from 'react-icons/fa';
 
 export const Programs = () => {
   return (
-    <section id="programs" className="py-20 bg-gray-50 dark:bg-dark-800">
+    <section id="programs" className="py-20 bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>Programs</SectionTitle>
         

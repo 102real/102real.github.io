@@ -5,7 +5,7 @@ import { FaGraduationCap, FaExternalLinkAlt } from 'react-icons/fa';
 
 export const Education = () => {
   return (
-    <section id="education" className="py-20 bg-white dark:bg-dark-900">
+    <section id="education" className="py-20 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>Education</SectionTitle>
         

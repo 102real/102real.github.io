@@ -30,10 +30,7 @@ export const Hero = () => {
             >
               <span className="text-black dark:text-white">BHAE</span>
               <br />
-              <span className="relative inline-block">
-                <span className="text-black dark:text-white">JHOOHYUNG</span>
-                <span className="absolute bottom-2 left-0 w-full h-1 bg-black dark:bg-white transform origin-left transition-transform duration-300"></span>
-              </span>
+              <span className="text-black dark:text-white">JHOOHYUNG</span>
             </motion.h1>
 
             <motion.div
@@ -47,9 +44,6 @@ export const Hero = () => {
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl font-light">
                 Standing at the intersection of humanities, design, and programming.
-              </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl font-light">
-                인문학, 디자인, 프로그래밍의 교차점에 서 있는 게임디자이너.
               </p>
             </motion.div>
 

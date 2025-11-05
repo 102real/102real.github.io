@@ -5,7 +5,7 @@ import { FaCode, FaTools } from 'react-icons/fa';
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-dark-900">
+    <section id="skills" className="py-20 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>Skills</SectionTitle>
         
@@ -50,7 +50,7 @@ export const Skills = () => {
                     {tools.map((tool, index) => (
                       <div
                         key={index}
-                        className="px-3 py-2 bg-gray-100 dark:bg-dark-700 text-gray-700 dark:text-gray-300 rounded text-sm"
+                        className="px-3 py-2 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 text-sm border border-gray-200 dark:border-gray-800"
                       >
                         {tool}
                       </div>
