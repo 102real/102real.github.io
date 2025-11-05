@@ -3,7 +3,7 @@ import { FaEnvelope } from 'react-icons/fa';
 
 export const About = () => {
   return (
-    <section id="about" className="py-20 bg-white dark:bg-dark-900">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>About Me</SectionTitle>
         
@@ -21,10 +21,10 @@ export const About = () => {
           </p>
 
           <div className="flex items-center space-x-4 text-gray-700 dark:text-gray-300">
-            <FaEnvelope className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+            <FaEnvelope className="w-5 h-5 text-black dark:text-white" />
             <a 
               href="mailto:reggae1@naver.com"
-              className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              className="hover:text-black dark:hover:text-white transition-colors underline"
             >
               reggae1@naver.com
             </a>
@@ -32,7 +32,7 @@ export const About = () => {
               href="/pdf/JH_CV_Eng.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
+              className="px-4 py-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black text-sm font-medium transition-colors"
             >
               CV (ENG)
             </a>
@@ -40,7 +40,7 @@ export const About = () => {
               href="/pdf/JH_CV_Kor.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors"
+              className="px-4 py-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black text-sm font-medium transition-colors"
             >
               CV (KOR)
             </a>

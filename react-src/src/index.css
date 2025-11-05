@@ -8,16 +8,37 @@
 @layer base {
   body {
     @apply font-sans transition-colors duration-300;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="black" opacity="0.8"/><circle cx="12" cy="12" r="8" fill="none" stroke="black" stroke-width="1" opacity="0.3"/></svg>') 12 12, auto;
+  }
+  
+  .dark body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="white" opacity="0.9"/><circle cx="12" cy="12" r="8" fill="none" stroke="white" stroke-width="1" opacity="0.4"/></svg>') 12 12, auto;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+  
+  a, button {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="black" opacity="0.9"/><circle cx="12" cy="12" r="10" fill="none" stroke="black" stroke-width="2" opacity="0.5"/></svg>') 12 12, pointer;
+  }
+  
+  .dark a, .dark button {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="white" opacity="1"/><circle cx="12" cy="12" r="10" fill="none" stroke="white" stroke-width="2" opacity="0.6"/></svg>') 12 12, pointer;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .artistic-border {
+    border-image: linear-gradient(45deg, #000, #333, #000) 1;
+  }
+  
+  .dark .artistic-border {
+    border-image: linear-gradient(45deg, #fff, #ccc, #fff) 1;
   }
 }
 
@@ -26,20 +47,69 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar for dark mode */
-.dark::-webkit-scrollbar {
-  width: 10px;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #171717;
 }
 
 .dark::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #171717;
 }
 
 .dark::-webkit-scrollbar-thumb {
-  background: #475569;
-  border-radius: 5px;
+  background: #525252;
+  border-radius: 4px;
 }
 
 .dark::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #737373;
+}
+
+/* Selection styling */
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+.dark ::selection {
+  background: #fff;
+  color: #000;
+}
+
+/* Artistic hover effects */
+.artistic-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.artistic-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+  transition: left 0.5s;
+}
+
+.artistic-hover:hover::before {
+  left: 100%;
+}
+
+.dark .artistic-hover::before {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
 }

@@ -16,7 +16,7 @@ export const Portfolio = () => {
     : portfolioData.filter(item => item.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-dark-900 pt-20">
+    <div className="min-h-screen bg-white dark:bg-black pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <SectionTitle subtitle="Explore my creative works and projects">
           Portfolio
@@ -33,10 +33,10 @@ export const Portfolio = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
+              className={`px-6 py-2 font-medium transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-primary-600 text-white shadow-lg scale-105'
-                  : 'bg-gray-200 dark:bg-dark-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-dark-600'
+                  ? 'bg-black dark:bg-white text-white dark:text-black scale-105'
+                  : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 border border-transparent hover:border-gray-400 dark:hover:border-gray-600'
               }`}
             >
               {category}

@@ -7,7 +7,12 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-900 dark:to-dark-800 pt-20">
+    <section className="min-h-screen flex items-center justify-center bg-white dark:bg-black pt-20 relative overflow-hidden">
+      {/* Artistic background elements */}
+      <div className="absolute inset-0 opacity-5 dark:opacity-10">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-black dark:bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-black dark:bg-white rounded-full blur-3xl"></div>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Text Content */}
@@ -21,12 +26,13 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold mb-6"
+              className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
             >
-              <span className="text-gray-900 dark:text-white">BHAE</span>
+              <span className="text-black dark:text-white">BHAE</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">
-                JHOOHYUNG
+              <span className="relative inline-block">
+                <span className="text-black dark:text-white">JHOOHYUNG</span>
+                <span className="absolute bottom-2 left-0 w-full h-1 bg-black dark:bg-white transform origin-left transition-transform duration-300"></span>
               </span>
             </motion.h1>
 
@@ -36,14 +42,14 @@ export const Hero = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="space-y-4 mb-8"
             >
-              <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium">
+              <p className="text-xl md:text-2xl text-black dark:text-white font-light tracking-wide border-l-2 border-black dark:border-white pl-4">
                 Game Designer & VR/AR Researcher
               </p>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-                Hello! I'm Bhae JhooHyung from Game designer, standing at the intersection of humanities, design, and programming.
+              <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl font-light">
+                Standing at the intersection of humanities, design, and programming.
               </p>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-                안녕하세요! 인문학, 디자인, 프로그래밍의 교차점에 서 있는 게임디자이너 배주형입니다.
+              <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl font-light">
+                인문학, 디자인, 프로그래밍의 교차점에 서 있는 게임디자이너.
               </p>
             </motion.div>
 
@@ -55,15 +61,16 @@ export const Hero = () => {
             >
               <a
                 href="mailto:reggae1@naver.com"
-                className="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-all duration-300 hover:shadow-lg"
+                className="group px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-medium transition-all duration-300 hover:tracking-wider relative overflow-hidden"
               >
-                Contact Me
+                <span className="relative z-10">Contact Me</span>
+                <span className="absolute inset-0 bg-gray-800 dark:bg-gray-200 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </a>
               <a
                 href="/pdf/JH_CV_Eng.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/20 font-medium rounded-lg transition-all duration-300"
+                className="px-8 py-3 border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-medium transition-all duration-300"
               >
                 Download CV
               </a>
@@ -77,12 +84,13 @@ export const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="flex-shrink-0"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full blur-2xl opacity-20"></div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-black dark:bg-white rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
+              <div className="absolute -inset-2 border-2 border-black dark:border-white rounded-full opacity-20"></div>
               <img
                 src="/assets/img/profile.png"
                 alt="Profile"
-                className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white dark:border-dark-700 shadow-2xl"
+                className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-black dark:border-white grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
           </motion.div>
@@ -97,9 +105,9 @@ export const Hero = () => {
           onClick={scrollToAbout}
         >
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="flex flex-col items-center text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+          className="flex flex-col items-center text-black dark:text-white hover:opacity-50 transition-opacity"
           >
             <span className="text-sm mb-2">Scroll Down</span>
             <FaArrowDown className="w-5 h-5" />

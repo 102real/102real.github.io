@@ -30,7 +30,7 @@ export const PortfolioCard = ({ item }) => {
             {item.type && item.type.map((t, idx) => (
               <span
                 key={idx}
-                className="px-3 py-1 bg-primary-600 text-white text-xs font-medium rounded-full"
+                className="px-3 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-medium"
               >
                 {t}
               </span>
@@ -45,7 +45,7 @@ export const PortfolioCard = ({ item }) => {
               {item.title}
             </h3>
             {item.period && (
-              <span className="text-sm text-primary-600 dark:text-primary-400 font-medium whitespace-nowrap">
+              <span className="text-sm text-black dark:text-white font-medium whitespace-nowrap">
                 {item.period}
               </span>
             )}
@@ -85,14 +85,14 @@ export const PortfolioCard = ({ item }) => {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="bg-white dark:bg-dark-800 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-white dark:bg-black border-2 border-gray-200 dark:border-gray-800 max-w-5xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
-              <div className="sticky top-0 right-0 flex justify-end p-4 bg-white dark:bg-dark-800 border-b border-gray-200 dark:border-dark-700 z-10">
+              <div className="sticky top-0 right-0 flex justify-end p-4 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 z-10">
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors"
+                  className="p-2 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
                 >
                   <FaTimes className="w-6 h-6 text-gray-600 dark:text-gray-400" />
                 </button>
@@ -118,7 +118,7 @@ export const PortfolioCard = ({ item }) => {
                       {item.title}
                     </h2>
                     {item.period && (
-                      <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium whitespace-nowrap ml-4">
+                      <span className="px-4 py-2 bg-gray-100 dark:bg-gray-900 text-black dark:text-white text-sm font-medium whitespace-nowrap ml-4 border border-gray-300 dark:border-gray-700">
                         {item.period}
                       </span>
                     )}
@@ -140,7 +140,7 @@ export const PortfolioCard = ({ item }) => {
                     {item.type && item.type.map((t, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-primary-600 text-white text-sm font-medium rounded-full"
+                        className="px-3 py-1 bg-black dark:bg-white text-white dark:text-black text-sm font-medium"
                       >
                         {t}
                       </span>
@@ -196,7 +196,7 @@ export const PortfolioCard = ({ item }) => {
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black transition-colors"
                         >
                           {link.type}
                           <FaExternalLinkAlt className="w-4 h-4" />

@@ -6,8 +6,8 @@ export const Card = ({
   hover = true,
   ...props 
 }) => {
-  const baseClasses = 'bg-white dark:bg-dark-800 rounded-xl shadow-md dark:shadow-dark-900/30 overflow-hidden transition-all duration-300';
-  const hoverClasses = hover ? 'hover:shadow-xl hover:-translate-y-1' : '';
+  const baseClasses = 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 overflow-hidden transition-all duration-300';
+  const hoverClasses = hover ? 'hover:border-black dark:hover:border-white hover:-translate-y-1' : '';
   
   return (
     <motion.div
