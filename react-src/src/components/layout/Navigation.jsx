@@ -56,7 +56,7 @@ export const Navigation = () => {
             to="/"
             className="text-2xl font-bold text-black dark:text-white tracking-tight hover:opacity-70 transition-opacity"
           >
-            B.J
+            BHAE JHOOHYUNG
           </Link>
 
           {/* Desktop Navigation */}

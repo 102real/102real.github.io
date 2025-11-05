@@ -11,7 +11,7 @@ export const Footer = () => {
           {/* About */}
           <div>
             <h3 className="text-lg font-bold text-black dark:text-white mb-4 tracking-tight">
-              B.J
+              BHAE JHOOHYUNG
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm font-light">
               Game Designer
