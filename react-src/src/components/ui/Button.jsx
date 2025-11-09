@@ -7,13 +7,13 @@ export const Button = ({
   className = '', 
   ...props 
 }) => {
-  const baseClasses = 'font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseClasses = 'font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';
   
   const variants = {
-    primary: 'bg-black hover:bg-gray-800 text-white focus:ring-black dark:bg-white dark:hover:bg-gray-200 dark:text-black dark:focus:ring-white',
-    secondary: 'bg-gray-200 hover:bg-gray-300 text-black focus:ring-gray-500 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white',
-    outline: 'border-2 border-black text-black hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black',
-    ghost: 'text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800',
+    primary: 'bg-charcoal-900 hover:bg-accent text-cream-50 focus:ring-accent',
+    secondary: 'bg-cream-200 hover:bg-cream-300 text-charcoal-900 focus:ring-charcoal-500',
+    outline: 'border-2 border-charcoal-900 text-charcoal-900 hover:bg-charcoal-900 hover:text-cream-50',
+    ghost: 'text-charcoal-900 hover:bg-cream-100',
   };
   
   const sizes = {

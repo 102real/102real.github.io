@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '../ui/Card';
 import { VideoEmbed } from './VideoEmbed';
-import { FaTimes, FaExternalLinkAlt } from 'react-icons/fa';
 
 export const PortfolioCard = ({ item }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,7 +13,7 @@ export const PortfolioCard = ({ item }) => {
         onClick={() => setIsModalOpen(true)}
       >
         {/* Image or Video Preview */}
-        <div className="relative h-64 bg-gray-200 dark:bg-dark-700 overflow-hidden">
+        <div className="relative h-64 bg-charcoal-200 overflow-hidden">
           {item.images && item.images.length > 0 ? (
             <img
               src={item.images[0]}
@@ -22,15 +21,15 @@ export const PortfolioCard = ({ item }) => {
               className="w-full h-full object-cover"
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center">
-              <span className="text-6xl">🎬</span>
+            <div className="w-full h-full flex items-center justify-center bg-sage-100">
+              <span className="text-sage-600 text-sm font-medium">VIDEO</span>
             </div>
           )}
           <div className="absolute top-4 right-4 flex flex-wrap gap-2">
             {item.type && item.type.map((t, idx) => (
               <span
                 key={idx}
-                className="px-3 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-medium"
+                className="px-3 py-1 bg-charcoal-900 text-cream-50 text-xs font-medium"
               >
                 {t}
               </span>
@@ -41,30 +40,30 @@ export const PortfolioCard = ({ item }) => {
         {/* Content */}
         <div className="p-6 flex-1 flex flex-col">
           <div className="flex items-start justify-between mb-2">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white pr-2">
+            <h3 className="font-heading text-xl font-bold text-charcoal-900 pr-2">
               {item.title}
             </h3>
             {item.period && (
-              <span className="text-sm text-black dark:text-white font-medium whitespace-nowrap">
+              <span className="text-sm text-charcoal-900 font-medium whitespace-nowrap">
                 {item.period}
               </span>
             )}
           </div>
           
           {item.organization && (
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-charcoal-600 mb-3">
               {item.organization}
             </p>
           )}
           
           {item.role && (
-            <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+            <p className="text-sm text-charcoal-700 mb-3">
               <strong>Role:</strong> {item.role}
             </p>
           )}
           
           {(item.descriptionKo || item.descriptionEn) && (
-            <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-3 flex-1">
+            <p className="text-sm text-charcoal-700 line-clamp-3 flex-1 font-light">
               {item.descriptionKo || item.descriptionEn}
             </p>
           )}
@@ -78,23 +77,25 @@ export const PortfolioCard = ({ item }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-900/90 backdrop-blur-sm"
             onClick={() => setIsModalOpen(false)}
           >
             <motion.div
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="bg-white dark:bg-black border-2 border-gray-200 dark:border-gray-800 max-w-5xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-cream-50 border-2 border-charcoal-300 max-w-5xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
-              <div className="sticky top-0 right-0 flex justify-end p-4 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 z-10">
+              <div className="sticky top-0 right-0 flex justify-end p-4 bg-cream-50 border-b border-charcoal-200 z-10">
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="p-2 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+                  className="p-2 hover:bg-cream-100 transition-colors"
                 >
-                  <FaTimes className="w-6 h-6 text-gray-600 dark:text-gray-400" />
+                  <svg className="w-6 h-6 text-charcoal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
               </div>
 
@@ -114,24 +115,24 @@ export const PortfolioCard = ({ item }) => {
                 {/* Title and Details */}
                 <div className="mb-6">
                   <div className="flex items-start justify-between mb-4">
-                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                    <h2 className="font-heading text-3xl font-bold text-charcoal-900">
                       {item.title}
                     </h2>
                     {item.period && (
-                      <span className="px-4 py-2 bg-gray-100 dark:bg-gray-900 text-black dark:text-white text-sm font-medium whitespace-nowrap ml-4 border border-gray-300 dark:border-gray-700">
+                      <span className="px-4 py-2 bg-sage-100 text-sage-700 text-sm font-medium whitespace-nowrap ml-4 border border-sage-200">
                         {item.period}
                       </span>
                     )}
                   </div>
 
                   {item.organization && (
-                    <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
+                    <p className="text-lg text-charcoal-700 mb-2">
                       <strong>Organization:</strong> {item.organization}
                     </p>
                   )}
 
                   {item.role && (
-                    <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+                    <p className="text-lg text-charcoal-700 mb-4">
                       <strong>Role:</strong> {item.role}
                     </p>
                   )}
@@ -140,13 +141,13 @@ export const PortfolioCard = ({ item }) => {
                     {item.type && item.type.map((t, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-black dark:bg-white text-white dark:text-black text-sm font-medium"
+                        className="px-3 py-1 bg-charcoal-900 text-cream-50 text-sm font-medium"
                       >
                         {t}
                       </span>
                     ))}
                     {item.status && (
-                      <span className="px-3 py-1 bg-yellow-500 text-white text-sm font-medium rounded-full">
+                      <span className="px-3 py-1 bg-terracotta-500 text-cream-50 text-sm font-medium">
                         {item.status}
                       </span>
                     )}
@@ -156,14 +157,14 @@ export const PortfolioCard = ({ item }) => {
                 {/* Description */}
                 {item.descriptionKo && (
                   <div className="mb-6">
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                    <p className="text-charcoal-700 leading-relaxed whitespace-pre-line font-light">
                       {item.descriptionKo}
                     </p>
                   </div>
                 )}
                 {item.descriptionEn && (
                   <div className="mb-6">
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                    <p className="text-charcoal-700 leading-relaxed whitespace-pre-line font-light">
                       {item.descriptionEn}
                     </p>
                   </div>
@@ -177,7 +178,7 @@ export const PortfolioCard = ({ item }) => {
                         key={idx}
                         src={img}
                         alt={`${item.title} ${idx + 1}`}
-                        className="w-full rounded-lg"
+                        className="w-full"
                       />
                     ))}
                   </div>
@@ -186,7 +187,7 @@ export const PortfolioCard = ({ item }) => {
                 {/* Links */}
                 {item.links && item.links.length > 0 && (
                   <div className="mb-6">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                    <h3 className="font-heading text-lg font-bold text-charcoal-900 mb-3">
                       Links
                     </h3>
                     <div className="flex flex-wrap gap-3">
@@ -196,10 +197,9 @@ export const PortfolioCard = ({ item }) => {
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black transition-colors"
+                          className="inline-flex items-center gap-2 px-5 py-2 bg-accent hover:bg-terracotta-600 text-cream-50 transition-colors duration-300"
                         >
                           {link.type}
-                          <FaExternalLinkAlt className="w-4 h-4" />
                         </a>
                       ))}
                     </div>
@@ -209,18 +209,18 @@ export const PortfolioCard = ({ item }) => {
                 {/* Credits */}
                 {item.credits && (
                   <div className="mb-6">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                    <h3 className="font-heading text-lg font-bold text-charcoal-900 mb-3">
                       Credits
                     </h3>
                     <div className="space-y-2">
                       {typeof item.credits === 'object' && !Array.isArray(item.credits) ? (
                         Object.entries(item.credits).map(([role, name], idx) => (
-                          <div key={idx} className="text-gray-700 dark:text-gray-300">
+                          <div key={idx} className="text-charcoal-700">
                             <strong>{role}:</strong> {Array.isArray(name) ? name.join(', ') : name}
                           </div>
                         ))
                       ) : (
-                        <p className="text-gray-700 dark:text-gray-300">
+                        <p className="text-charcoal-700">
                           {JSON.stringify(item.credits)}
                         </p>
                       )}
@@ -231,10 +231,10 @@ export const PortfolioCard = ({ item }) => {
                 {/* Exhibition/Event Info */}
                 {item.exhibition && (
                   <div className="mb-6">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                    <h3 className="font-heading text-lg font-bold text-charcoal-900 mb-3">
                       Exhibition
                     </h3>
-                    <div className="space-y-2 text-gray-700 dark:text-gray-300">
+                    <div className="space-y-2 text-charcoal-700">
                       <p><strong>Name:</strong> {item.exhibition.name}</p>
                       {item.exhibition.sponsor && <p><strong>Sponsor:</strong> {item.exhibition.sponsor}</p>}
                       {item.exhibition.organizer && <p><strong>Organizer:</strong> {item.exhibition.organizer}</p>}
@@ -246,12 +246,12 @@ export const PortfolioCard = ({ item }) => {
 
                 {item.exhibitions && item.exhibitions.length > 0 && (
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                    <h3 className="font-heading text-lg font-bold text-charcoal-900 mb-3">
                       Exhibitions
                     </h3>
                     {item.exhibitions.map((exh, idx) => (
-                      <div key={idx} className="mb-4 pb-4 border-b border-gray-200 dark:border-dark-700 last:border-0">
-                        <div className="space-y-2 text-gray-700 dark:text-gray-300">
+                      <div key={idx} className="mb-4 pb-4 border-b border-charcoal-200 last:border-0">
+                        <div className="space-y-2 text-charcoal-700">
                           <p className="font-semibold">{exh.name}</p>
                           {exh.organizer && <p><strong>Organizer:</strong> {exh.organizer}</p>}
                           <p><strong>Venue:</strong> {exh.venue}</p>
@@ -265,7 +265,7 @@ export const PortfolioCard = ({ item }) => {
                                   href={article}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block text-primary-600 dark:text-primary-400 hover:underline text-sm break-all"
+                                  className="block text-accent hover:text-terracotta-600 hover:underline text-sm break-all"
                                 >
                                   {article}
                                 </a>

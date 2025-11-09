@@ -16,8 +16,8 @@ export const Portfolio = () => {
     : portfolioData.filter(item => item.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div className="min-h-screen bg-cream-50 pt-24">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
         <SectionTitle subtitle="Explore my creative works and projects">
           Portfolio
         </SectionTitle>
@@ -33,10 +33,10 @@ export const Portfolio = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 font-medium transition-all duration-300 ${
+              className={`px-6 py-3 font-medium transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-black dark:bg-white text-white dark:text-black scale-105'
-                  : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 border border-transparent hover:border-gray-400 dark:hover:border-gray-600'
+                  ? 'bg-accent text-cream-50 scale-105'
+                  : 'bg-cream-200 text-charcoal-700 hover:bg-cream-300 border border-charcoal-200 hover:border-accent'
               }`}
             >
               {category}
@@ -47,7 +47,7 @@ export const Portfolio = () => {
         {/* Portfolio Grid */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredItems.map((item) => (
             <motion.div
@@ -66,7 +66,7 @@ export const Portfolio = () => {
         {/* Empty State */}
         {filteredItems.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-xl text-gray-600 dark:text-gray-400">
+            <p className="text-xl text-charcoal-600">
               No items found in this category.
             </p>
           </div>
