@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { DarkModeToggle } from './DarkModeToggle';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,50 +41,72 @@ export const Navigation = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800'
+          ? 'bg-cream-50/95 backdrop-blur-md border-b border-charcoal-200'
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex justify-between items-center h-20 md:h-24">
           {/* Logo */}
           <Link
             to="/"
-            className="text-2xl font-bold text-black dark:text-white tracking-tight hover:opacity-70 transition-opacity"
+            className="font-heading text-xl md:text-2xl font-bold text-charcoal-900 tracking-tight hover:text-accent transition-colors duration-300"
           >
-            BHAE JHOOHYUNG
+            Bhae JhooHyung
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path + item.hash}
                 onClick={() => handleNavClick(item.path, item.hash)}
-                className={`px-4 py-2 text-sm font-medium transition-all relative ${
+                className={`px-5 py-2 text-sm font-medium tracking-wide transition-all duration-300 relative group ${
                   location.pathname === item.path
-                    ? 'text-black dark:text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-black dark:after:bg-white'
-                    : 'text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white'
+                    ? 'text-accent'
+                    : 'text-charcoal-600 hover:text-charcoal-900'
                 }`}
               >
                 {item.name}
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-accent transition-all duration-300 ${
+                  location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
               </Link>
             ))}
-            <DarkModeToggle />
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <DarkModeToggle />
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-black dark:text-white hover:opacity-70 transition-opacity"
+              className="p-2 text-charcoal-900 hover:text-accent transition-colors duration-300"
               aria-label="Toggle menu"
             >
-              {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
             </button>
           </div>
         </div>
@@ -99,18 +119,18 @@ export const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800"
+            className="md:hidden bg-cream-50 border-t border-charcoal-200"
           >
-            <div className="px-4 py-4 space-y-2">
+            <div className="px-6 py-6 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path + item.hash}
                   onClick={() => handleNavClick(item.path, item.hash)}
-                  className={`block px-4 py-3 text-base font-medium transition-colors border-l-2 ${
+                  className={`block px-6 py-4 text-base font-medium transition-all duration-300 border-l-4 ${
                     location.pathname === item.path
-                      ? 'text-black dark:text-white border-black dark:border-white bg-gray-50 dark:bg-gray-900'
-                      : 'text-gray-600 dark:text-gray-400 border-transparent hover:border-gray-400 dark:hover:border-gray-600'
+                      ? 'text-accent border-accent bg-cream-100'
+                      : 'text-charcoal-600 border-transparent hover:border-charcoal-300 hover:bg-cream-100'
                   }`}
                 >
                   {item.name}

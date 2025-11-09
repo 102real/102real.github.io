@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { FaArrowDown } from 'react-icons/fa';
 
 export const Hero = () => {
   const scrollToAbout = () => {
@@ -7,14 +6,15 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-white dark:bg-black pt-20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-cream-50 pt-20 relative overflow-hidden">
       {/* Artistic background elements */}
-      <div className="absolute inset-0 opacity-5 dark:opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-black dark:bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-black dark:bg-white rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-terracotta-300 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-sage-300 rounded-full blur-3xl"></div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+      
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-16">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -26,23 +26,23 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+              className="font-heading text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight leading-none"
             >
-              <span className="text-black dark:text-white">BHAE</span>
+              <span className="text-charcoal-900">Bhae</span>
               <br />
-              <span className="text-black dark:text-white">JHOOHYUNG</span>
+              <span className="text-charcoal-900">JhooHyung</span>
             </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="space-y-4 mb-8"
+              className="space-y-6 mb-10"
             >
-              <p className="text-xl md:text-2xl text-black dark:text-white font-light tracking-wide border-l-2 border-black dark:border-white pl-4">
+              <p className="text-xl md:text-2xl text-charcoal-900 font-light tracking-wide border-l-4 border-accent pl-6">
                 Game Designer & VR/AR Researcher
               </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl font-light">
+              <p className="text-lg text-charcoal-600 max-w-2xl font-light leading-relaxed">
                 Standing at the intersection of humanities, design, and programming.
               </p>
             </motion.div>
@@ -55,16 +55,15 @@ export const Hero = () => {
             >
               <a
                 href="mailto:reggae1@naver.com"
-                className="group px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-medium transition-all duration-300 hover:tracking-wider relative overflow-hidden"
+                className="group px-10 py-4 bg-charcoal-900 text-cream-50 font-medium transition-all duration-300 hover:bg-accent hover:tracking-wider relative overflow-hidden"
               >
                 <span className="relative z-10">Contact Me</span>
-                <span className="absolute inset-0 bg-gray-800 dark:bg-gray-200 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </a>
               <a
                 href="/pdf/JH_CV_Eng.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black font-medium transition-all duration-300"
+                className="px-10 py-4 border-2 border-charcoal-900 text-charcoal-900 hover:bg-charcoal-900 hover:text-cream-50 font-medium transition-all duration-300"
               >
                 Download CV
               </a>
@@ -79,12 +78,12 @@ export const Hero = () => {
             className="flex-shrink-0"
           >
             <div className="relative group">
-              <div className="absolute inset-0 bg-black dark:bg-white rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
-              <div className="absolute -inset-2 border-2 border-black dark:border-white rounded-full opacity-20"></div>
+              <div className="absolute inset-0 bg-accent rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+              <div className="absolute -inset-3 border border-charcoal-300 rounded-full opacity-30"></div>
               <img
                 src="/assets/img/profile.png"
                 alt="Profile"
-                className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-black dark:border-white grayscale hover:grayscale-0 transition-all duration-500"
+                className="relative w-72 h-72 md:w-96 md:h-96 rounded-full object-cover border-4 border-charcoal-900 grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
           </motion.div>
@@ -99,12 +98,24 @@ export const Hero = () => {
           onClick={scrollToAbout}
         >
           <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-          className="flex flex-col items-center text-black dark:text-white hover:opacity-50 transition-opacity"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="flex flex-col items-center text-charcoal-600 hover:text-charcoal-900 transition-colors duration-300"
           >
-            <span className="text-sm mb-2">Scroll Down</span>
-            <FaArrowDown className="w-5 h-5" />
+            <span className="text-sm font-light tracking-widest mb-3">SCROLL</span>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
           </motion.div>
         </motion.div>
       </div>

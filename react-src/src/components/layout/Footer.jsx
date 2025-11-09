@@ -1,19 +1,18 @@
-import { FaGithub, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-charcoal-900 border-t border-charcoal-800">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* About */}
           <div>
-            <h3 className="text-lg font-bold text-black dark:text-white mb-4 tracking-tight">
-              BHAE JHOOHYUNG
+            <h3 className="font-heading text-xl font-bold text-cream-50 mb-6 tracking-tight">
+              Bhae JhooHyung
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm font-light">
+            <p className="text-charcoal-400 text-sm font-light leading-relaxed">
               Game Designer
               <br />
               VR/AR Researcher
@@ -22,24 +21,22 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold text-black dark:text-white mb-4">
+            <h3 className="text-lg font-bold text-cream-50 mb-6">
               Contact
             </h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <a
                 href="mailto:reggae1@naver.com"
-                className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm"
+                className="block text-charcoal-400 hover:text-accent transition-colors duration-300 text-sm"
               >
-                <FaEnvelope className="mr-2" />
                 reggae1@naver.com
               </a>
               <a
                 href="https://github.com/102real"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm"
+                className="block text-charcoal-400 hover:text-accent transition-colors duration-300 text-sm"
               >
-                <FaGithub className="mr-2" />
                 GitHub
               </a>
             </div>
@@ -47,27 +44,27 @@ export const Footer = () => {
 
           {/* CV Downloads */}
           <div>
-            <h3 className="text-lg font-bold text-black dark:text-white mb-4">
+            <h3 className="text-lg font-bold text-cream-50 mb-6">
               Download CV
             </h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 href="/pdf/JH_CV_Eng.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black text-sm font-medium transition-colors text-center"
+                className="block px-6 py-3 bg-cream-50 hover:bg-accent text-charcoal-900 hover:text-cream-50 text-sm font-medium transition-all duration-300 text-center"
               >
                 CV (English)
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 href="/pdf/JH_CV_Kor.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black text-sm font-medium transition-colors text-center"
+                className="block px-6 py-3 bg-cream-50 hover:bg-accent text-charcoal-900 hover:text-cream-50 text-sm font-medium transition-all duration-300 text-center"
               >
                 이력서 (한글)
               </motion.a>
@@ -75,8 +72,8 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-dark-800">
-          <p className="text-center text-sm text-gray-600 dark:text-gray-400">
+        <div className="mt-12 pt-8 border-t border-charcoal-800">
+          <p className="text-center text-sm text-charcoal-500 font-light">
             © {currentYear} Bhae JhooHyung. All rights reserved.
           </p>
         </div>

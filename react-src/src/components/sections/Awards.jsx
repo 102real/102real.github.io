@@ -1,30 +1,25 @@
 import { SectionTitle } from '../ui/SectionTitle';
 import { Card } from '../ui/Card';
 import { awardsData } from '../../data/awards';
-import { FaTrophy, FaCertificate } from 'react-icons/fa';
 
 export const Awards = () => {
   return (
-    <section id="awards" className="py-20 bg-gray-50 dark:bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="awards" className="py-24 bg-cream-50">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <SectionTitle>Awards & Certifications</SectionTitle>
         
         {/* Awards */}
-        <div className="mb-12">
-          <Card className="p-6 md:p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <FaTrophy className="w-7 h-7 text-yellow-500" />
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Awards
-              </h3>
-            </div>
-            <ul className="space-y-3">
+        <div className="mb-10">
+          <Card className="p-8 md:p-10">
+            <h3 className="font-heading text-3xl font-bold text-charcoal-900 mb-8">
+              Awards
+            </h3>
+            <ul className="space-y-4">
               {awardsData.awards.map((award) => (
                 <li
                   key={award.id}
-                  className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
+                  className="flex items-start gap-4 text-charcoal-700 leading-relaxed pl-6 relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-terracotta-500 before:rounded-full"
                 >
-                  <FaTrophy className="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" />
                   <span>{award.title}</span>
                 </li>
               ))}
@@ -34,20 +29,16 @@ export const Awards = () => {
 
         {/* Certifications */}
         <div>
-          <Card className="p-6 md:p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <FaCertificate className="w-7 h-7 text-primary-600 dark:text-primary-400" />
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Certifications
-              </h3>
-            </div>
-            <ul className="space-y-3">
+          <Card className="p-8 md:p-10">
+            <h3 className="font-heading text-3xl font-bold text-charcoal-900 mb-8">
+              Certifications
+            </h3>
+            <ul className="space-y-4">
               {awardsData.certifications.map((cert) => (
                 <li
                   key={cert.id}
-                  className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
+                  className="flex items-start gap-4 text-charcoal-700 leading-relaxed pl-6 relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-sage-500 before:rounded-full"
                 >
-                  <FaCertificate className="w-5 h-5 text-primary-600 dark:text-primary-400 mt-1 flex-shrink-0" />
                   <span>{cert.title}</span>
                 </li>
               ))}
