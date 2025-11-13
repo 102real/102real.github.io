@@ -56,14 +56,14 @@ export const Navigation = () => {
           >
             <Link
               to="/"
-              className="font-heading text-xl md:text-2xl font-bold text-charcoal-900 tracking-tight hover:text-black transition-colors duration-300"
+              className="font-heading text-xl lg:text-2xl font-bold text-charcoal-900 tracking-tight hover:text-black transition-colors duration-300 whitespace-nowrap"
             >
               Bhae JhooHyung
             </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="hidden lg:flex items-center space-x-2">
             {navItems.map((item) => (
               <motion.div
                 key={item.name}
@@ -97,7 +97,7 @@ export const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(!isOpen)}
@@ -138,7 +138,7 @@ export const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-charcoal-200"
+            className="lg:hidden bg-white border-t border-charcoal-200"
           >
             <div className="px-6 py-6 space-y-1">
               {navItems.map((item) => (
