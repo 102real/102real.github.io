@@ -2,7 +2,7 @@ import { SectionTitle } from '../ui/SectionTitle';
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 bg-cream-100">
+    <section id="about" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <SectionTitle>About Me</SectionTitle>
         
@@ -27,7 +27,7 @@ export const About = () => {
               href="/pdf/JH_CV_Eng.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-charcoal-900 hover:bg-accent text-cream-50 text-sm font-medium transition-all duration-300"
+              className="px-6 py-3 bg-black hover:bg-gray-800 text-white text-sm font-medium transition-all duration-300"
             >
               CV (ENG)
             </a>
@@ -35,7 +35,7 @@ export const About = () => {
               href="/pdf/JH_CV_Kor.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-charcoal-900 hover:bg-accent text-cream-50 text-sm font-medium transition-all duration-300"
+              className="px-6 py-3 bg-black hover:bg-gray-800 text-white text-sm font-medium transition-all duration-300"
             >
               CV (KOR)
             </a>

@@ -43,7 +43,7 @@ export const Navigation = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-cream-50/95 backdrop-blur-md border-b border-charcoal-200'
+          ? 'bg-white/95 backdrop-blur-md border-b border-charcoal-200'
           : 'bg-transparent'
       }`}
     >
@@ -119,7 +119,7 @@ export const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-cream-50 border-t border-charcoal-200"
+            className="md:hidden bg-white border-t border-charcoal-200"
           >
             <div className="px-6 py-6 space-y-1">
               {navItems.map((item) => (
@@ -129,8 +129,8 @@ export const Navigation = () => {
                   onClick={() => handleNavClick(item.path, item.hash)}
                   className={`block px-6 py-4 text-base font-medium transition-all duration-300 border-l-4 ${
                     location.pathname === item.path
-                      ? 'text-accent border-accent bg-cream-100'
-                      : 'text-charcoal-600 border-transparent hover:border-charcoal-300 hover:bg-cream-100'
+                      ? 'text-black border-black bg-gray-100'
+                      : 'text-charcoal-600 border-transparent hover:border-charcoal-300 hover:bg-gray-100'
                   }`}
                 >
                   {item.name}

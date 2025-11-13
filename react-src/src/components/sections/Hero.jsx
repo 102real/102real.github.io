@@ -6,7 +6,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-cream-50 pt-20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-white pt-20 relative overflow-hidden">
       {/* Artistic background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-terracotta-300 rounded-full blur-3xl"></div>
@@ -55,7 +55,7 @@ export const Hero = () => {
             >
               <a
                 href="mailto:reggae1@naver.com"
-                className="group px-10 py-4 bg-charcoal-900 text-cream-50 font-medium transition-all duration-300 hover:bg-accent hover:tracking-wider relative overflow-hidden"
+                className="group px-10 py-4 bg-black text-white font-medium transition-all duration-300 hover:bg-gray-800 hover:tracking-wider relative overflow-hidden"
               >
                 <span className="relative z-10">Contact Me</span>
               </a>
@@ -63,7 +63,7 @@ export const Hero = () => {
                 href="/pdf/JH_CV_Eng.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-4 border-2 border-charcoal-900 text-charcoal-900 hover:bg-charcoal-900 hover:text-cream-50 font-medium transition-all duration-300"
+                className="px-10 py-4 border-2 border-black text-black hover:bg-black hover:text-white font-medium transition-all duration-300"
               >
                 Download CV
               </a>

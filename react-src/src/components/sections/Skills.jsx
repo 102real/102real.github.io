@@ -4,7 +4,7 @@ import { skillsData } from '../../data/skills';
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-cream-100">
+    <section id="skills" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <SectionTitle>Skills</SectionTitle>
         
@@ -43,7 +43,7 @@ export const Skills = () => {
                     {tools.map((tool, index) => (
                       <div
                         key={index}
-                        className="px-4 py-2 bg-cream-100 text-charcoal-700 text-sm border border-charcoal-200 hover:border-accent transition-colors duration-300"
+                        className="px-4 py-2 bg-white text-charcoal-700 text-sm border border-charcoal-200 hover:border-black transition-colors duration-300"
                       >
                         {tool}
                       </div>

@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* About */}
           <div>
-            <h3 className="font-heading text-xl font-bold text-cream-50 mb-6 tracking-tight">
+            <h3 className="font-heading text-xl font-bold text-white mb-6 tracking-tight">
               Bhae JhooHyung
             </h3>
             <p className="text-charcoal-400 text-sm font-light leading-relaxed">
@@ -21,13 +21,13 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold text-cream-50 mb-6">
+            <h3 className="text-lg font-bold text-white mb-6">
               Contact
             </h3>
             <div className="space-y-3">
               <a
                 href="mailto:reggae1@naver.com"
-                className="block text-charcoal-400 hover:text-accent transition-colors duration-300 text-sm"
+                className="block text-charcoal-400 hover:text-white transition-colors duration-300 text-sm"
               >
                 reggae1@naver.com
               </a>
@@ -35,7 +35,7 @@ export const Footer = () => {
                 href="https://github.com/102real"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-charcoal-400 hover:text-accent transition-colors duration-300 text-sm"
+                className="block text-charcoal-400 hover:text-white transition-colors duration-300 text-sm"
               >
                 GitHub
               </a>
@@ -44,7 +44,7 @@ export const Footer = () => {
 
           {/* CV Downloads */}
           <div>
-            <h3 className="text-lg font-bold text-cream-50 mb-6">
+            <h3 className="text-lg font-bold text-white mb-6">
               Download CV
             </h3>
             <div className="space-y-3">
@@ -54,7 +54,7 @@ export const Footer = () => {
                 href="/pdf/JH_CV_Eng.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-6 py-3 bg-cream-50 hover:bg-accent text-charcoal-900 hover:text-cream-50 text-sm font-medium transition-all duration-300 text-center"
+                className="block px-6 py-3 bg-white hover:bg-gray-800 text-black hover:text-white text-sm font-medium transition-all duration-300 text-center"
               >
                 CV (English)
               </motion.a>
@@ -64,7 +64,7 @@ export const Footer = () => {
                 href="/pdf/JH_CV_Kor.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-6 py-3 bg-cream-50 hover:bg-accent text-charcoal-900 hover:text-cream-50 text-sm font-medium transition-all duration-300 text-center"
+                className="block px-6 py-3 bg-white hover:bg-gray-800 text-black hover:text-white text-sm font-medium transition-all duration-300 text-center"
               >
                 이력서 (한글)
               </motion.a>

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-sans transition-colors duration-300 bg-cream-50;
+    @apply font-sans transition-colors duration-300 bg-white;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -29,20 +29,20 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f9f6f0;
+  background: #fafafa;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e56b52;
+  background: #18181b;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d44d35;
+  background: #000000;
 }
 
 /* Selection styling */
 ::selection {
-  background: #e56b52;
-  color: #fdfcf9;
+  background: #000000;
+  color: #ffffff;
 }

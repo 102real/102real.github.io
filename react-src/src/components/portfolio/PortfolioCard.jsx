@@ -29,7 +29,7 @@ export const PortfolioCard = ({ item }) => {
             {item.type && item.type.map((t, idx) => (
               <span
                 key={idx}
-                className="px-3 py-1 bg-charcoal-900 text-cream-50 text-xs font-medium"
+                className="px-3 py-1 bg-black text-white text-xs font-medium"
               >
                 {t}
               </span>
@@ -84,14 +84,14 @@ export const PortfolioCard = ({ item }) => {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="bg-cream-50 border-2 border-charcoal-300 max-w-5xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-white border-2 border-charcoal-300 max-w-5xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
-              <div className="sticky top-0 right-0 flex justify-end p-4 bg-cream-50 border-b border-charcoal-200 z-10">
+              <div className="sticky top-0 right-0 flex justify-end p-4 bg-white border-b border-charcoal-200 z-10">
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="p-2 hover:bg-cream-100 transition-colors"
+                  className="p-2 hover:bg-gray-100 transition-colors"
                 >
                   <svg className="w-6 h-6 text-charcoal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -141,13 +141,13 @@ export const PortfolioCard = ({ item }) => {
                     {item.type && item.type.map((t, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-charcoal-900 text-cream-50 text-sm font-medium"
+                        className="px-3 py-1 bg-black text-white text-sm font-medium"
                       >
                         {t}
                       </span>
                     ))}
                     {item.status && (
-                      <span className="px-3 py-1 bg-terracotta-500 text-cream-50 text-sm font-medium">
+                      <span className="px-3 py-1 bg-gray-700 text-white text-sm font-medium">
                         {item.status}
                       </span>
                     )}
@@ -197,7 +197,7 @@ export const PortfolioCard = ({ item }) => {
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-5 py-2 bg-accent hover:bg-terracotta-600 text-cream-50 transition-colors duration-300"
+                          className="inline-flex items-center gap-2 px-5 py-2 bg-black hover:bg-gray-800 text-white transition-colors duration-300"
                         >
                           {link.type}
                         </a>

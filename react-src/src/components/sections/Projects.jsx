@@ -4,7 +4,7 @@ import { projectsData } from '../../data/projects';
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-24 bg-cream-100">
+    <section id="projects" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <SectionTitle>Projects</SectionTitle>
         

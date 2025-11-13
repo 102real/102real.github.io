@@ -4,7 +4,7 @@ import { researchData } from '../../data/research';
 
 export const Research = () => {
   return (
-    <section id="research" className="py-24 bg-cream-50">
+    <section id="research" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <SectionTitle>Research</SectionTitle>
         
@@ -35,7 +35,7 @@ export const Research = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2 bg-accent hover:bg-terracotta-600 text-cream-50 text-sm font-medium transition-colors duration-300"
+                      className="inline-flex items-center gap-2 px-5 py-2 bg-black hover:bg-gray-800 text-white text-sm font-medium transition-colors duration-300"
                     >
                       {link.type}
                     </a>
@@ -80,7 +80,7 @@ export const Research = () => {
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-5 py-2 bg-accent hover:bg-terracotta-600 text-cream-50 text-sm font-medium transition-colors duration-300"
+                          className="inline-flex items-center gap-2 px-5 py-2 bg-black hover:bg-gray-800 text-white text-sm font-medium transition-colors duration-300"
                         >
                           {link.type}
                         </a>
@@ -124,7 +124,7 @@ export const Research = () => {
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-5 py-2 bg-accent hover:bg-terracotta-600 text-cream-50 text-sm font-medium transition-colors duration-300"
+                          className="inline-flex items-center gap-2 px-5 py-2 bg-black hover:bg-gray-800 text-white text-sm font-medium transition-colors duration-300"
                         >
                           {link.type}
                         </a>

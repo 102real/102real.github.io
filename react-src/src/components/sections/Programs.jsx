@@ -4,7 +4,7 @@ import { programsData } from '../../data/programs';
 
 export const Programs = () => {
   return (
-    <section id="programs" className="py-24 bg-cream-50">
+    <section id="programs" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <SectionTitle>Programs</SectionTitle>
         

@@ -10,10 +10,10 @@ export const Button = ({
   const baseClasses = 'font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';
   
   const variants = {
-    primary: 'bg-charcoal-900 hover:bg-accent text-cream-50 focus:ring-accent',
-    secondary: 'bg-cream-200 hover:bg-cream-300 text-charcoal-900 focus:ring-charcoal-500',
-    outline: 'border-2 border-charcoal-900 text-charcoal-900 hover:bg-charcoal-900 hover:text-cream-50',
-    ghost: 'text-charcoal-900 hover:bg-cream-100',
+    primary: 'bg-black hover:bg-gray-800 text-white focus:ring-black',
+    secondary: 'bg-gray-200 hover:bg-gray-300 text-black focus:ring-gray-500',
+    outline: 'border-2 border-black text-black hover:bg-black hover:text-white',
+    ghost: 'text-black hover:bg-gray-100',
   };
   
   const sizes = {

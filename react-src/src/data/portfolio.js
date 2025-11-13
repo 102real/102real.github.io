@@ -70,6 +70,7 @@ export const portfolioData = [
       'https://www.youtube.com/embed/a6Dqyvgcxqo',
       'https://www.youtube.com/embed/VmNM7MkoGBo',
     ],
+    images: ['/assets/img/Erasing Silence.png'],
     credits: {
       'Project Design': 'Hyerin Kim, JhooHyung Bhae, Soomin Shin, Myungseok Oh, Hyeyeon Lee',
       'Design': 'Hyeyeon Lee, JhooHyung Bhae, Soomin Shin',
@@ -92,6 +93,7 @@ export const portfolioData = [
     descriptionKo: '본 프로젝트는 \'위안부\' 문제를 여성 인권 유린 측면에서 접근하고, 유네스코 등재를 위한 사료 아카이빙을 위한 가상 갤러리를 구축하는 것을 목적으로 제작되었다.',
     descriptionEn: 'This project is designed to approach the \'Comfort Women\' problem in terms of women\'s human rights abuses and to build a virtual gallery for archiving historical materials for UNESCO registration.',
     videoUrl: 'https://www.youtube.com/embed/lHJcvL_vTlA',
+    images: ['/assets/img/Voice of \'Comfort Women\' Virtual Gallery.png'],
     credits: {
       'Project Design': 'Daye Kim, JhooHyung Bhae, Sunwoo Choi',
       'Design': 'Daye Kim, JhooHyung Bhae',
@@ -109,6 +111,7 @@ export const portfolioData = [
     role: '프로그래밍, 3D 그래픽 디자인',
     descriptionKo: '\'VR 생태탐험대 맹꽁이 편\'은 안양천 실개천 생태공원에 서식하는 맹꽁이의 시점을 통해 도시에서 소동물의 생태적 적응 사례를 경험하게 해주는 아이들을 위한 가상현실 생태교육 콘텐츠',
     videoUrl: 'https://www.youtube.com/embed/fYAsfylhUlk',
+    images: ['/assets/img/VR생태탐험대 맹꽁이편.png'],
   },
   
   {
@@ -174,6 +177,7 @@ export const portfolioData = [
       'https://www.youtube.com/embed/fvVqo8vYPBA',
       'https://www.youtube.com/embed/PJ2pmmNsUNs',
     ],
+    images: ['/assets/img/9호 감방이야기_트레일러.png'],
   },
   
   {
@@ -186,6 +190,7 @@ export const portfolioData = [
     role: 'Director, 3D Graphic Design, Animation',
     descriptionKo: '오래전부터 배달의 민족의 브랜드 컬러를 보며 파란색과 가까운 하늘색의 계열이기에 식욕 감퇴를 불러일으키는 요식업에 적합하지 않은 색이라고 생각해왔었다. 그러나 배달의 민족이 요식업 업계의 절반 이상의 점유율을 보유한 지금, 색의 수반감정에 기초하여 모든 브랜딩을 이해하려던 자신의 고정관념을 떨쳐내야겠다는 생각을 하게 되었다. 이러한 생각에서 출발하여 배달 어플과 비슷한 음식 배달이라는 성격을 지닌 푸드트럭을 이용하여 배달의 민족 아이덴티티 컬러를 이용한 요식업 영상을 기획하게 되었다.',
     videoUrl: 'https://www.youtube.com/embed/lEDaTn3HaFA',
+    images: ['/assets/img/DELIVERY FOOD TRUCK.png'],
     credits: {
       'Director': 'JhooHyung Bhae',
       '3D Graphic Design': 'JhooHyung Bhae',
@@ -222,6 +227,7 @@ export const portfolioData = [
     descriptionKo: '뮤지션 2D의 앨범 \'하루 (Day)\'의 타이틀곡인 \'Jacket\'의 뮤직비디오로 현재 자신이 하고싶은 일을 옷에 비유하여 자신이 어울리는 옷을 찾아 떠나는 2D의 모습을 영상에 담았다.',
     descriptionEn: 'The music video of "Jacket," the title track of musician 2D\'s album "Day," captures 2D\'s image of him leaving to find clothes that suit him by metaphorizing what he wants to do.',
     videoUrl: 'https://www.youtube.com/embed/Qi62ucqSJ6U',
+    images: ['/assets/img/2D Jacket.png'],
     credits: {
       'Director': 'JhooHyung Bhae',
       'Producer': 'JhooHyung Bhae',

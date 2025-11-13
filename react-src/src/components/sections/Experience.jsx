@@ -4,7 +4,7 @@ import { experienceData } from '../../data/experience';
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-24 bg-cream-50">
+    <section id="experience" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <SectionTitle>Experience</SectionTitle>
         

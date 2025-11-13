@@ -21,7 +21,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-cream-50">
+      <div className="flex flex-col min-h-screen bg-white">
         <Navigation />
         <main className="flex-grow">
           <AnimatedRoutes />
