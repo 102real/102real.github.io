@@ -93,7 +93,7 @@ export const portfolioData = [
     descriptionKo: '본 프로젝트는 \'위안부\' 문제를 여성 인권 유린 측면에서 접근하고, 유네스코 등재를 위한 사료 아카이빙을 위한 가상 갤러리를 구축하는 것을 목적으로 제작되었다.',
     descriptionEn: 'This project is designed to approach the \'Comfort Women\' problem in terms of women\'s human rights abuses and to build a virtual gallery for archiving historical materials for UNESCO registration.',
     videoUrl: 'https://www.youtube.com/embed/lHJcvL_vTlA',
-    images: ['/assets/img/Voice of \'Comfort Women\' Virtual Gallery.png'],
+    images: ['/assets/img/Voice of Comfort Women Virtual Gallery.png'],
     credits: {
       'Project Design': 'Daye Kim, JhooHyung Bhae, Sunwoo Choi',
       'Design': 'Daye Kim, JhooHyung Bhae',

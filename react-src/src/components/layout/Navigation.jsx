@@ -50,39 +50,58 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-20 md:h-24">
           {/* Logo */}
-          <Link
-            to="/"
-            className="font-heading text-xl md:text-2xl font-bold text-charcoal-900 tracking-tight hover:text-accent transition-colors duration-300"
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            Bhae JhooHyung
-          </Link>
+            <Link
+              to="/"
+              className="font-heading text-xl md:text-2xl font-bold text-charcoal-900 tracking-tight hover:text-black transition-colors duration-300"
+            >
+              Bhae JhooHyung
+            </Link>
+          </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-2">
             {navItems.map((item) => (
-              <Link
+              <motion.div
                 key={item.name}
-                to={item.path + item.hash}
-                onClick={() => handleNavClick(item.path, item.hash)}
-                className={`px-5 py-2 text-sm font-medium tracking-wide transition-all duration-300 relative group ${
-                  location.pathname === item.path
-                    ? 'text-accent'
-                    : 'text-charcoal-600 hover:text-charcoal-900'
-                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                {item.name}
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-accent transition-all duration-300 ${
-                  location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
-                }`}></span>
-              </Link>
+                <Link
+                  to={item.path + item.hash}
+                  onClick={() => handleNavClick(item.path, item.hash)}
+                  className={`block px-5 py-2 text-sm font-medium tracking-wide transition-all duration-300 relative group ${
+                    location.pathname === item.path
+                      ? 'text-black font-semibold'
+                      : 'text-charcoal-600 hover:text-black'
+                  }`}
+                >
+                  {item.name}
+                  {/* Underline animation */}
+                  <motion.span 
+                    className="absolute bottom-0 left-0 h-0.5 bg-black"
+                    initial={false}
+                    animate={{
+                      width: location.pathname === item.path ? '100%' : '0%'
+                    }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  />
+                  {/* Hover underline */}
+                  <span className="absolute bottom-0 left-0 h-0.5 bg-gray-400 w-0 group-hover:w-full transition-all duration-300"></span>
+                </Link>
+              </motion.div>
             ))}
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
+            <motion.button
+              whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-charcoal-900 hover:text-accent transition-colors duration-300"
+              className="p-2 text-charcoal-900 hover:text-black transition-colors duration-300"
               aria-label="Toggle menu"
             >
               <svg
@@ -107,7 +126,7 @@ export const Navigation = () => {
                   />
                 )}
               </svg>
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
@@ -123,18 +142,22 @@ export const Navigation = () => {
           >
             <div className="px-6 py-6 space-y-1">
               {navItems.map((item) => (
-                <Link
+                <motion.div
                   key={item.name}
-                  to={item.path + item.hash}
-                  onClick={() => handleNavClick(item.path, item.hash)}
-                  className={`block px-6 py-4 text-base font-medium transition-all duration-300 border-l-4 ${
-                    location.pathname === item.path
-                      ? 'text-black border-black bg-gray-100'
-                      : 'text-charcoal-600 border-transparent hover:border-charcoal-300 hover:bg-gray-100'
-                  }`}
+                  whileTap={{ scale: 0.98, x: 5 }}
                 >
-                  {item.name}
-                </Link>
+                  <Link
+                    to={item.path + item.hash}
+                    onClick={() => handleNavClick(item.path, item.hash)}
+                    className={`block px-6 py-4 text-base font-medium transition-all duration-300 border-l-4 ${
+                      location.pathname === item.path
+                        ? 'text-black border-black bg-gray-100 font-semibold'
+                        : 'text-charcoal-600 border-transparent hover:border-black hover:bg-gray-100 hover:text-black'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </motion.div>
