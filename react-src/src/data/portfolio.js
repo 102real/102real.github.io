@@ -143,7 +143,7 @@ export const portfolioData = [
     role: '기획, 프로그래밍, 인터렉션디자인, 배경디자인, 사운드디자인',
     descriptionKo: '제주 4.3을 주제로 한 인터렉티브 VR콘텐츠로 참여자는 인터랙션을 통해 이름 없는 보통 사람들이 겪었던 아픔에 공감하고, 역사 속에 스러져간 이들에 대한 추모로 나아간다.',
     videoUrl: 'https://www.youtube.com/embed/stN_lkrqG8o',
-    images: ['/assets/img/DG2.jpg', '/assets/img/DG1.jpg', '/assets/img/DG3.jpg'],
+    images: ['/assets/img/동백꽃곱을락.png', '/assets/img/DG2.jpg', '/assets/img/DG1.jpg', '/assets/img/DG3.jpg'],
     exhibitions: [
       {
         name: '제주4·3과 친구들 : 겨울나기 좋은 방',
@@ -209,6 +209,7 @@ export const portfolioData = [
     descriptionKo: '2019 에너지 콘텐츠 공모전 영상부분 우수상 수상 작품으로 모두를 위한 지속 가능한 에너지인 신재생에너지를 홍보하기 위한 2D모션그래픽영상을 제작했다.',
     descriptionEn: 'It has produced a 2D motion graphic video to promote new and renewable energy, a sustainable energy for all, as a work that won the Excellence Award in the 2019 Energy Content Contest video.',
     videoUrl: 'https://www.youtube.com/embed/7-P1QAwfyFM',
+    images: ['/assets/img/모두를 위한 에너지.png'],
     credits: {
       'Director': 'JhooHyung Bhae',
       'Graphic Design': 'JhooHyung Bhae',
