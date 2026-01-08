@@ -5,7 +5,7 @@ const projects = [
     id: "01",
     name: "Showhand",
     direction: "마지막 패를 공개할 시간",
-    description: "모든 것이 불타 사라지는 전장, 침묵을 깨는 것은 카드 섞이는 소리뿐. 운조차 실력이 되는 이곳에서 당신의 직감을 시험해 보세요. 이 판을 뒤집을 주인공은 바로 당신입니다.",
+    description: "모든 것이 불타 사라지는 전장,\n침묵을 깨는 것은 카드 섞이는 소리뿐.\n\n운조차 실력이 되는 이곳에서 당신의 직감을 시험해 보세요.\n이 판을 뒤집을 주인공은 바로 당신입니다.",
     tags: ["2026 Q1", "Roguelike", "Action", "Poker"]
   }
 ];
@@ -49,7 +49,7 @@ export default function Projects() {
                 <h4 className="text-xl md:text-2xl font-medium">
                   {project.direction}
                 </h4>
-                <p className="text-sm md:text-base leading-relaxed break-keep">
+                <p className="text-sm md:text-base leading-relaxed break-keep whitespace-pre-line">
                   {project.description}
                 </p>
               </div>
