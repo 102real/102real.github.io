@@ -6,10 +6,10 @@ export default function About() {
       {/* Marquee Slogan Background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-[0.05] pointer-events-none flex items-center z-0">
         <div className="whitespace-nowrap animate-marquee">
-          <span className="text-[15vh] font-black uppercase mx-8">Small Motion, Better World</span>
-          <span className="text-[15vh] font-black uppercase mx-8">Small Motion, Better World</span>
-          <span className="text-[15vh] font-black uppercase mx-8">Small Motion, Better World</span>
-          <span className="text-[15vh] font-black uppercase mx-8">Small Motion, Better World</span>
+          <span className="text-[15vh] font-black uppercase mx-8">Interactions That Can Make the World Better.</span>
+          <span className="text-[15vh] font-black uppercase mx-8">Interactions That Can Make the World Better.</span>
+          <span className="text-[15vh] font-black uppercase mx-8">Interactions That Can Make the World Better.</span>
+          <span className="text-[15vh] font-black uppercase mx-8">Interactions That Can Make the World Better.</span>
         </div>
       </div>
 
@@ -26,7 +26,7 @@ export default function About() {
           </p>
           <p className="text-xl md:text-3xl font-medium">
             세상을 바꾸는<br />
-            조그만 움직임
+            움직임
           </p>
         </div>
       </div>
